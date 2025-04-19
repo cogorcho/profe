@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Contacto Persona</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.persona_id.label }}<br>
+	{{ form.persona_id(size=32) }}
+	{% for error in form.persona_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.tipocontacto_id.label }}<br>
+	{{ form.tipocontacto_id(size=32) }}
+	{% for error in form.tipocontacto_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

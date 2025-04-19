@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Carrera</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.institucion_id.label }}<br>
+	{{ form.institucion_id(size=32) }}
+	{% for error in form.institucion_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.nombre.label }}<br>
+	{{ form.nombre(size=32) }}
+	{% for error in form.nombre.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.anios.label }}<br>
+	{{ form.anios(size=32) }}
+	{% for error in form.anios.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

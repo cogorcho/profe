@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Materia Plan</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.planestudio_id.label }}<br>
+	{{ form.planestudio_id(size=32) }}
+	{% for error in form.planestudio_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.materia_id.label }}<br>
+	{{ form.materia_id(size=32) }}
+	{% for error in form.materia_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.anio_id.label }}<br>
+	{{ form.anio_id(size=32) }}
+	{% for error in form.anio_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

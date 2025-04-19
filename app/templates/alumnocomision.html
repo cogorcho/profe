@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Alumno Comision</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.comision_id.label }}<br>
+	{{ form.comision_id(size=32) }}
+	{% for error in form.comision_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.alumno_id.label }}<br>
+	{{ form.alumno_id(size=32) }}
+	{% for error in form.alumno_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

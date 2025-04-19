@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Docente Cargo</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.docente_id.label }}<br>
+	{{ form.docente_id(size=32) }}
+	{% for error in form.docente_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.cargodocente_id.label }}<br>
+	{{ form.cargodocente_id(size=32) }}
+	{% for error in form.cargodocente_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.finicio.label }}<br>
+	{{ form.finicio(size=32) }}
+	{% for error in form.finicio.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.ffin.label }}<br>
+	{{ form.ffin(size=32) }}
+	{% for error in form.ffin.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

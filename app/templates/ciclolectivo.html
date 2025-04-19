@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Ciclo Lectivo</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.anio.label }}<br>
+	{{ form.anio(size=32) }}
+	{% for error in form.anio.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.finicio.label }}<br>
+	{{ form.finicio(size=32) }}
+	{% for error in form.finicio.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.ffin.label }}<br>
+	{{ form.ffin(size=32) }}
+	{% for error in form.ffin.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

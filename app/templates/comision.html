@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Comision</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.ciclolectivo_id.label }}<br>
+	{{ form.ciclolectivo_id(size=32) }}
+	{% for error in form.ciclolectivo_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.cuatrimestre_id.label }}<br>
+	{{ form.cuatrimestre_id(size=32) }}
+	{% for error in form.cuatrimestre_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.turno_id.label }}<br>
+	{{ form.turno_id(size=32) }}
+	{% for error in form.turno_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.materiadocente_id.label }}<br>
+	{{ form.materiadocente_id(size=32) }}
+	{% for error in form.materiadocente_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

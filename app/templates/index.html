@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{%  block content %}
+    <h1>Hello, {{ user.username }}</h1>
+    {% for post in posts %}
+        <div><p>{{ post.author.username }} says: <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+	<ul>
+		<li><a href="/index">Index</a></li>
+		<li><a href="/login">Login</a></li>
+		<li><a href="/registro">Registro</a></li>
+		<li><a href="/anio">Anio</a></li>
+		<li><a href="/anio_tabla">Anio Tabla</a></li>
+		<li><a href="/cargodocente">Cargodocente<Id></a></li>
+		<li><a href="/cargodocente_tabla">Cargodocente Tabla</a></li>
+		<li><a href="/ciclolectivo">Ciclolectivo</a></li>
+		<li><a href="/ciclolectivo_tabla">Ciclolectivo Tabla</a></li>
+		<li><a href="/institucion">Institucion</a></li>
+		<li><a href="/institucion_tabla">Institucion Tabla</a></li>
+		<li><a href="/materia">Materia</a></li>
+		<li><a href="/materia_tabla">Materia Tabla</a></li>
+		<li><a href="/persona">Persona</a></li>
+		<li><a href="/persona_tabla">Persona Tabla</a></li>
+		<li><a href="/tipocontacto">Tipocontacto</a></li>
+		<li><a href="/tipocontacto_tabla">Tipocontacto Tabla</a></li>
+		<li><a href="/turno">Turno</a></li>
+		<li><a href="/turno_tabla">Turno Tabla</a></li>
+		<li><a href="/contactopersona">Contactopersona</a></li>
+		<li><a href="/contactopersona_tabla">Contactopersona Tabla</a></li>
+		<li><a href="/docente">Docente</a></li>
+		<li><a href="/docente_tabla">Docente Tabla</a></li>
+		<li><a href="/usuario">Usuario</a></li>
+		<li><a href="/usuario_tabla">Usuario Tabla</a></li>
+		<li><a href="/docentecargo">Docentecargo</a></li>
+		<li><a href="/docentecargo_tabla">Docentecargo Tabla</a></li>
+		<li><a href="/posteo">Posteo</a></li>
+		<li><a href="/posteo_tabla">Posteo Tabla</a></li>
+		<li><a href="/alumno">Alumno</a></li>
+		<li><a href="/alumno_tabla">Alumno Tabla</a></li>
+		<li><a href="/alumnocomision">Alumnocomision</a></li>
+		<li><a href="/alumnocomision_tabla">Alumnocomision Tabla</a></li>
+		<li><a href="/carrera">Carrera</a></li>
+		<li><a href="/carrera_tabla">Carrera Tabla</a></li>
+		<li><a href="/comision">Comision</a></li>
+		<li><a href="/comision_tabla">Comision Tabla</a></li>
+		<li><a href="/cuatrimestre">Cuatrimestre</a></li>
+		<li><a href="/cuatrimestre_tabla">Cuatrimestre Tabla</a></li>
+		<li><a href="/materiadocente">Materiadocente</a></li>
+		<li><a href="/materiadocente_tabla">Materiadocente Tabla</a></li>
+		<li><a href="/materiaplan">Materiaplan</a></li>
+		<li><a href="/materiaplan_tabla">Materiaplan Tabla</a></li>
+		<li><a href="/planestudio">Planestudio</a></li>
+		<li><a href="/planestudio_tabla">Planestudio Tabla</a></li>
+		
+	</ul>
+{% endblock %}

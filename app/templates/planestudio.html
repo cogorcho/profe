@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Plan Estudio</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.nombre.label }}<br>
+	{{ form.nombre(size=32) }}
+	{% for error in form.nombre.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.finicio.label }}<br>
+	{{ form.finicio(size=32) }}
+	{% for error in form.finicio.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.ffin.label }}<br>
+	{{ form.ffin(size=32) }}
+	{% for error in form.ffin.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.carrera_id.label }}<br>
+	{{ form.carrera_id(size=32) }}
+	{% for error in form.carrera_id.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}

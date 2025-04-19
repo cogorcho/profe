@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Persona</h1>
+<hr>
+<form action="" method="post" novalidate>
+    {{ form.hidden_tag() }}
+	<p>
+	{{ form.apellido.label }}<br>
+	{{ form.apellido(size=32) }}
+	{% for error in form.apellido.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.nombre.label }}<br>
+	{{ form.nombre(size=32) }}
+	{% for error in form.nombre.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.dni.label }}<br>
+	{{ form.dni(size=32) }}
+	{% for error in form.dni.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>
+	{{ form.fnacto.label }}<br>
+	{{ form.fnacto(size=32) }}
+	{% for error in form.fnacto.errors %}
+		<span style="color: red;">[{{ error }}]</span>
+	{% endfor %}
+	</p>
+	<p>{{ form.submit() }}</p>
+</form>
+{% endblock %}
