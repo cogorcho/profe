@@ -1,6 +1,6 @@
 import sqlite3
 
-conn = sqlite3.connect('app.db')
+conn = sqlite3.connect('../app.db')
 
 sql = 'select cid,name,type,"notnull" as nonul,dflt_value from pragma_table_info("{}") where pk=0'
 tbs = "select name from sqlite_master where type = 'table' and name not like 'sqlite%' and name not like 'alembic%'"
